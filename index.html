@@ -27,14 +27,43 @@
       }
       .content {
         color: #444;
-	font-size: 0.7em;
+        font-size: 0.7em;
         font-weight: 500;
         margin-bottom: 5px;
       }
-    </style>
+
+      /* Add these new styles */
+      .institution-wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .institution-logo {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+
+      .institution-content {
+        flex: 1;
+      }
+
+      /* For mobile responsiveness */
+      @media (max-width: 600px) {
+        .institution-wrapper {
+          gap: 15px;
+        }
+        .institution-logo {
+          width: 45px;
+          height: 45px;
+        }
+      }
+</style>
   </head>
   <!-- Top Main Section -->
-  <body>
+ <body>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
@@ -60,26 +89,37 @@
               </td>
             </tr>
             
-            <!-- Education Section -->
-            <tr>
-              <td colspan="2" class="edu-work-section">
-                <h2 class="edu-work-title">Education Experience</h2>
-                <div class="institution">
-                  <div class="institution-name">School of Automation, Northwestern Polytechnical University, 2022-2026</div>
-                  <div class="content">B.S.E., supervised by Prof. <a href="https://teacher.nwpu.edu.cn/nwpuzhanglei.html">Lei Zhang</a>.</div>
-                </div>
-              </td>
-            </tr>
-	  <!-- Work Section -->
-	   <tr>
-              <td colspan="2" class="edu-work-section">
-                <h2 class="edu-work-title">Work Experience</h2>
-                <div class="institution">
-                  <div class="institution-name">SGIT AI Lab, State Grid Corporation of China, 2024-now</div>
-                  <div class="content">Research Intern.</div>
-                </div>
-              </td>
-            </tr>
+<!-- Education Section -->
+<tr>
+  <td colspan="2" class="edu-work-section">
+    <h2 class="edu-work-title">Education Experience</h2>
+    <div class="institution">
+      <div class="institution-wrapper">
+        <img src="images/nwpu_logo.png" alt="NWPU Logo" class="institution-logo">
+        <div class="institution-content">
+          <div class="institution-name">School of Automation, Northwestern Polytechnical University, 2022-2026</div>
+          <div class="content">B.S.E., supervised by Prof. <a href="https://teacher.nwpu.edu.cn/nwpuzhanglei.html">Lei Zhang</a>.</div>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- Work Section -->
+<tr>
+  <td colspan="2" class="edu-work-section">
+    <h2 class="edu-work-title">Work Experience</h2>
+    <div class="institution">
+      <div class="institution-wrapper">
+        <img src="images/sgit_logo.png" alt="SGIT Logo" class="institution-logo">
+        <div class="institution-content">
+          <div class="institution-name">SGIT AI Lab, State Grid Corporation of China, 2024-now</div>
+          <div class="content">Research Intern.</div>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
 
    
 
