@@ -94,7 +94,7 @@ Guidance by Themselves">
     <a href=https://jingdongwang2017.github.io/>Jingdong Wang</a><sup style="color:#9b6fbb;">4</sup>
   </span>
 </div>
-<div class="is-size-5 publication-affiliations">
+<div class="is-size-5.5 publication-affiliations">
   <span><sup style="color:#6fbf73;">1</sup> Northwestern Polytechnical University</span>
   <span><sup style="color:#ed4b82;">2</sup> SGIT AI Lab, State Grid Corporation of China</span>
   <br />
@@ -110,7 +110,7 @@ Guidance by Themselves">
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <sup style="color: red; font-weight: bold; font-size: 1.0em;">
-                <b>Pre-print</b>
+                <b>Preprint</b>
               </sup>
             </span>
             <br>
@@ -159,7 +159,7 @@ Guidance by Themselves">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
             Diffusion models have demonstrated great success in the field of text-to-image generation. However, alleviating the misalignment between the text prompts and images is still challenging.
@@ -184,7 +184,7 @@ Guidance by Themselves">
     <div class="columns is-centered has-text-centered">
       <!-- <div class="column is-full-width has-text-centered"> -->
         <div class="column is-four-fifths">
-        <h2 class="title is-3">Overview</h2>
+        <h2 class="title is-3">Observations</h2>
         <div class="content has-text-justified">
           <p>
             The text-to-image diffusion model (T2I-Model) first generates an image according to the text prompt. Then the image is sent to the <b>Concept Matching</b> module, <b>Attribute Concentration</b> module, and <b>Fidelity Preservation</b> module to compute the loss for fine-tuning the online T2I-Model.
@@ -205,7 +205,7 @@ Guidance by Themselves">
     
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Visualizations</h2>
+        <h2 class="title is-3">Approach</h2>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
@@ -224,21 +224,27 @@ Guidance by Themselves">
           </div>
         </div>
 
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            The text-to-image diffusion model (T2I-Model) first generates an image according to the text prompt. Then the image is sent to the <b>Concept Matching</b> module, <b>Attribute Concentration</b> module, and <b>Fidelity Preservation</b> module to compute the loss for fine-tuning the online T2I-Model.
+          </p>
+          <p>
+            Specifically, we leverage an image captioning model to supervise the diffusion model to sufficiently attend to each concept in the text prompt in the Concept Matching module. In the Attribute Concentration module, we promote the consistency of the attention map of each entity's noun and attributes. Finally, in the Fidelity Preservation module, we introduce a novel adversarial loss to conserve the generation quality of the online fine-tuning model.
+          </p>
 
-<section>
-  <div class="section" id="org-banners" style="display:flex">
-    <a href="https://www.cuhk.edu.hk/chinese/index.html" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/cuhk.png">
-    </a>
-  <div class="section" id="org-banners" style="display:flex">
-      <a href="https://www.sensetime.com/cn" target="_blank" rel="external">
-          <img class="center-block org-banner" src="static/images/sensetime.png">
-      </a>
-  <div class="section" id="org-banners" style="display:flex">
-    <a href="https://www.shlab.org.cn/" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/shlab.png">
-    </a>
-  </div>
+      </div> 
+      <div class="content has-text-centered">
+        <img src="static/images/framework3.png" alt="algebraic reasoning" width="80%"/>
+        <p> Overview of 💫<span class="mathvista">CoMat</span>. 
+      </div>
+        </div>
+      </div>
+    </div>
+      
 </section>
 
 
