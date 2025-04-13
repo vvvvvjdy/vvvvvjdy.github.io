@@ -133,7 +133,7 @@ Guidance by Themselves">
               </span>
 
               <span class="link-block">
-                <a href='#'
+                <a href='https://github.com/vvvvvjdy/SRA'
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -158,20 +158,19 @@ Guidance by Themselves">
     <div class="content has-text-centered">
       <img src="static/images/demo1_cat.png" alt="algebraic reasoning" width="60%"/>
     </div>
-    <!-- Abstract. -->
+    <!-- Overview. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Overview</h2>
+        <h2 class="title is-3">🧐Overview</h2>
         <div class="content has-text-justified">
           <p>
-            Diffusion models have demonstrated great success in the field of text-to-image generation. However, alleviating the misalignment between the text prompts and images is still challenging.
-            The root reason behind the misalignment has not been extensively investigated. We observe that the misalignment is caused by inadequate token attention activation. We further <b>attribute this phenomenon to the diffusion model's insufficient condition utilization</b>, which is caused by its training paradigm. 
+          Recent studies have shown that learning a meaningful internal representation can both accelerate generative training and enhance generation quality of the diffusion transformers. However, <b>existing approaches</b> typically either introduce an <b>additional and complex representation training framework</b> or rely on a <b>large-scale pre-trained representation foundation model</b> to provide representational guidance during the original generative training. 
           </p>
           <p>
-            To address the issue, we propose 💫<span class="mathvista">CoMat</span>, <b>an end-to-end diffusion model fine-tuning strategy</b> with an image-to-text concept matching mechanism. <b>We leverage an image captioning model to measure image-to-text alignment and guide the diffusion model to revisit ignored tokens</b>. A novel attribute concentration module is also proposed to address the attribute binding problem. 
-          </p> 
+            In this work, we argue that the unique discriminative process inherent to diffusion transformers makes it possible to offer such guidance without needing external components. We thus introduce 🎭 <b><span style="color: red;">SRA</span></b>, a a simple yet
+straightforward method that introducing representation guidance through a self-distillation manner. 
           <p>
-            <b>Without any image or human preference data</b>, we use <b>only 20K text prompts</b> to fine-tune SDXL to obtain CoMat-SDXL. Extensive experiments show that CoMat-SDXL significantly outperforms the baseline model SDXL in two text-to-image alignment benchmarks and achieves start-of-the-art performance.
+          Experiment relusts show that SRA accelerates training and improves generation performance for both DiTs and SiTs.
           </p> 
         </div>
       </div>
