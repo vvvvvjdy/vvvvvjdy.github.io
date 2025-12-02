@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="No Other Representation Component Is Needed:
+Diffusion Transformers Can Provide Representation
+Guidance by Themselves">
+  <meta name="keywords" content="SRA">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SRA</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+/Users/panlu/Library/Mobile Documents/com~apple~CloudDocs/ImageMath/visual-mathqa-server/data_final/images
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link rel="icon" href="./static/images/logo.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./data/results/output_folders.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+
+  <script src="./visualizer/data/data_public.js" defer></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <span class="mathvista" style="vertical-align: middle">🎭SRA</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            Self-Representation Alignment for Diffusion Transformers
+          </h2>
+        <div class="is-size-5 publication-authors">
+<span class="author-block">
+    <a href="https://vvvvvjdy.github.io/">Dengyang Jiang</a><sup style="color:#ed4b82;">1</sup><sup style="color:#000000;">,</sup><sup style="color:#6fbf73;">2</sup><sup style="color:#ffb6c1;">†</sup>,</span>
+  <span class="author-block">
+    <a href="https://sallymmx.github.io/">Mengmeng Wang</a><sup style="color:#9b6fbb;">3</sup><sup style="color:#000000;">,</sup><sup style="color:#6fbf73;">2</sup><sup style="color:#95a595;">*</sup>,</span>
+     <span class="author-block">
+    <a href="https://github.com/liuzhuozheng-LI/liuzhuozheng-LI">Liuzhuozheng Li</a><sup style="color:#6fbf73;">2</sup>,
+  </span>
+  <span class="author-block">
+    <a href="https://teacher.nwpu.edu.cn/nwpuzhanglei.html">Lei Zhang</a><sup style="color:#ed4b82;">1</sup>,</span>
+    <br />
+  <span class="author-block">
+    <a href="https://haoyuwang.com">Haoyu Wang</a><sup style="color:#ed4b82;">1</sup>,
+  </span>
+  <span class="author-block">
+    <a href="https://teacher.nwpu.edu.cn/weiwei.html">Wei Wei</a><sup style="color:#ed4b82;">1</sup>,
+  </span>
+  <span class="author-block">
+    <a href="https://ieeexplore.ieee.org/author/37274248300">Guang Dai</a><sup style="color:#6fbf73;">2</sup>,
+  </span>
+  <span class="author-block">
+    <a href="https://teacher.nwpu.edu.cn/ynzhang">Yanning Zhang</a><sup style="color:#ed4b82;">1</sup>,
+  </span>
+  <span class="author-block">
+    <a href=https://jingdongwang2017.github.io/>Jingdong Wang</a><sup style="color:#ffac33;">4</sup>
+  </span>
+</div>
+<div class="is-size-5.5 publication-affiliations">
+  <span><sup style="color:#ed4b82;">1</sup> Northwestern Polytechnical University</span> 
+  <span><sup style="color:#6fbf73;">2</sup> SGIT AI Lab, State Grid Corporation of China</span>
+  <br />
+  <span><sup style="color:#9b6fbb;">3</sup> Zhejiang University of Technology</span>
+  <span><sup style="color:#ffac33;">4</sup> Baidu Inc.</span>
+</div>
+<div class="is-size-6 publication-notes">
+  <span><sup style="color:#ffb6c1;">†</sup> Project lead</span>
+  <span><sup style="color:#95a595;">*</sup> Corresponding author</span>
+</div>
+
+    
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <sup style="color: red; font-weight: bold; font-size: 1.0em;">
+                <b>Preprint</b>
+              </sup>
+            </span>
+            <br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <!-- @PAN TODO: change links -->
+                <a href="https://arxiv.org/pdf/2505.02831"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href='https://github.com/vvvvvjdy/SRA'
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <img src="static/images/selected_samples.png" alt="algebraic reasoning" width="90%"/>
+    </div>
+    <!-- Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">🚈Overview</h2>
+        <div class="content has-text-centered">
+      <img src="static/images/difference_00.png" alt="algebraic reasoning" width="90%"/>
+    </div>
+        <div class="content has-text-justified">
+          <p>
+          Recent studies have shown that learning a meaningful internal representation can both accelerate generative training and enhance generation quality of the diffusion transformers. However, <b>existing approaches</b> typically either introduce an <b>additional and complex representation training framework</b> or rely on a <b>large-scale pre-trained representation foundation model</b> to provide representational guidance during the original generative training. 
+          </p>
+          <p>
+            In this work, we argue that <b>the unique discriminative process inherent to diffusion transformers</b> makes it possible to offer such guidance <b>without</b> needing external components. We thus introduce <b>SRA</b>, a simple yet
+straightforward method that introducing representation guidance through a <b>self-distillation</b> manner. 
+          <p>
+          Experiment relusts show that SRA <b>accelerates training</b> and <b>improves generation performance</b> for both DiTs and SiTs.
+          </p> 
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
+</div>
+</section>
+
+            
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">🔍Observations</h2>
+           <div class="content has-text-centered">
+        <img src="static/images/observation(combine).png" alt="algebraic reasoning" width="80%"/>
+      </div>
+        <div class="content has-text-justified">
+          <p>
+           We find out that the diffusion transformer gets a roughly from <b>croase-to-fine discriminative process</b> when only generative training is performed.
+          </p>
+         
+
+      </div> 
+        </div>
+      </div>
+    </div>
+
+    
+     <div class="columns is-centered has-text-centered">
+      <!-- Approach -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">🔑Approach</h2>
+          <div class="content has-text-centered">
+        <img src="static/images/SRA_method_00.png" alt="algebraic reasoning" width="70%"/>
+      </div>
+        <div class="content has-text-justified">
+          <p>
+            In short, SRA <b>aligns the output latent representation</b> of the diffusion transformer <b>in earlier layer with higher noise</b> to that <b>in later layer with lower noise</b> to progressively enhance the overall representation learning during only generative process.
+          </p>
+      </div> 
+        </div>
+      </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">🍀Results</h2>
+        <div class="content has-text-justified">
+          
+        <div class="content has-text-centered">
+        <img src="static/images/improvement_baseline.png" alt="algebraic reasoning" width="80%"/>
+        <p> SRA shows benifit on <b>different baselines across different model size</b>. 
+      </div>
+
+          <div class="content has-text-centered">
+        <img src="static/images/main_result.png" alt="algebraic reasoning" width="70%"/>
+        <p> SRA shows <b>comparable or superior performance</b> against other methods that leverage either representation training paradigm or representation foundation model. 
+      </div>
+
+          <div class="content has-text-centered">
+        <img src="static/images/ablation_00.png" alt="algebraic reasoning" width="90%"/>
+        <p> SRA genuinely <b>enhances the representation capacity</b> of the baseline model, and the generative capability is indeed <b>strongly correlated</b> with the representation guidance.
+      </div>
+          
+      </div> 
+        </div>
+      </div>
+    </div>
+
+    <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">🌺Citation</h2>
+      <pre><code>@article{jiang2025sra,
+  title={No Other Representation Component Is Needed: Diffusion Transformers Can Provide Representation Guidance by Themselves},
+  author={Jiang, Dengyang and Wang, Mengmeng and Li, Liuzhuozheng and Zhang, Lei and Wang, Haoyu and Wei, Wei and Dai, Guang and Zhang, Yanning and Wang, Jingdong},
+  journal={arXiv preprint arXiv:2505.02831},
+  year={2025}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+      
+</section>
+
+
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align:center;font-size:12px;">
+            This website is adapted from <a href="https://caraj7.github.io/comat/">CoMat</a> and <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
