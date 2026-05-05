@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="D-OPSD: On-Policy Self-Distillation for Continuously Tuning Step-Distilled Diffusion Models">
+  <meta name="keywords" content="D-OPSD, on-policy self-distillation, step-distilled diffusion models, continuous tuning, text-to-image generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D-OPSD</title>
+
+  <link rel="icon" href="./static/images/methods_compare.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <style>
+    .publication-title { line-height: 1.12; }
+    .publication-subtitle { margin-top: 0.75rem; }
+    .section .content p { font-size: 1.05rem; }
+    .figure-caption { margin-top: 0.75rem; color: #4a4a4a; }
+    .compact-section { padding-top: 1.5rem; }
+    .image-frame img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <span class="mathvista" style="vertical-align: middle">D-OPSD</span>
+          </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            On-Policy Self-Distillation for Continuously Tuning Step-Distilled Diffusion Models
+          </h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://vvvvvjdy.github.io/">Dengyang Jiang</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://srameo.github.io/">Xin Jin</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://chrisliu6.github.io/">Dongyang Liu</a><sup>4,2</sup>,</span>
+            <span class="author-block"><a href="https://xmz111.github.io/">Zanyi Wang</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="https://github.com/DuNGEOnmassster">Mingzhe Zheng</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=DbRZSaoAAAAJ&hl=en">Ruoyi Du</a><sup>2</sup>,</span>
+            <br>
+            <span class="author-block"><a href="https://xiangpengyang.github.io/">Xiangpeng Yang</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://github.com/JerryWu-code">Qilong Wu</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=utI5YFEAAAAJ&hl=zh-CN">Zhen Li</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=_go6DPsAAAAJ&hl=zh-CN">Peng Gao</a><sup>2*</sup>,</span>
+            <span class="author-block"><a href="https://hyang.org/">Harry Yang</a><sup>1*</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/stevenhoi/home">Steven C.H. Hoi</a><sup>2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-affiliations">
+            <span><sup>1</sup> The Hong Kong University of Science and Technology</span>
+            <span>&nbsp;</span>
+            <span><sup>2</sup> Z-Image Team, Alibaba Group</span><br>
+            <span><sup>3</sup> University of California, San Diego</span>
+            <span>&nbsp;</span>
+            <span><sup>4</sup> The Chinese University of Hong Kong</span>
+          </div>
+          <div class="is-size-6 publication-notes">
+            <span><sup>*</sup> Corresponding authors</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup style="color: red; font-weight: bold; font-size: 1.0em;"><b>Tech Report</b></sup></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              
+               <span class="link-block">
+                <a href="https://github.com/vvvvvjdy/D-OPSD" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (D-OPSD)</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/Tongyi-MAI/Z-Image" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (Z-Image)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Background</h2>
+        <div class="content has-text-justified">
+          <p>
+            High-performance image generation models are shifting from inefficient multi-step samplers to efficient few-step counterparts. These step-distilled diffusion models are attractive in practical production settings because they reduce the number of function evaluations while preserving, and often improving, generation quality.
+          </p>
+          <p>
+            However, how to continually tune such models remains unclear.
+          </p>
+        </div>
+        <div class="content has-text-centered image-frame">
+          <img src="static/images/methods_compare.jpg" alt="Comparison of training paradigms" width="90%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Vanilla SFT provides supervision through ground-truth velocity, but it is off-policy and lacks train-inference state consistency. Offline RL-style methods such as Diffusion-DPO or PSO introduce pairwise supervision, yet their optimization states and supervision signals are still not fully induced by the student's current distribution. Online RL-style methods better preserve few-step behavior by training on model roll-outs, but they depend on reward functions or reward models that are often unavailable for secondary developers who only have image-text pairs.
+          </p>
+          <p>
+            D-OPSD occupies a different point in this design space: it is on-policy, does not require a reward model, preserves train-inference consistency, and still incorporates target image-text pairs through self-distillation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section compact-section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation</h2>
+        <div class="content has-text-centered image-frame">
+          <img src="static/images/zeroshot_incontext_z_01.jpg" alt="Zero-shot in-context behavior" width="92%">
+          <p class="figure-caption">Modern diffusion models with LLM/VLM encoders can inherit in-context capabilities from the encoder.</p>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            The key question is: how can target-image information be introduced  while keeping the student's few-step roll-out unchanged? We find that when replacing text-only features with multimodal features extracted from both the text prompt and the target image, the diffusion model can already generate variations that preserve the target concept or style, even without additional training.
+          </p>
+          <p>
+            This emergent behavior enables on-policy self-distillation in diffusion models. The target image is used as in-context supervision for a stronger teacher condition, rather than as a direct denoising target that would alter the trajectory itself.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section compact-section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-centered image-frame">
+          <img src="static/images/method_01.jpg" alt="D-OPSD method overview" width="95%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            For each training pair, D-OPSD first passes the prompt alone and the prompt together with the target image through the encoder to obtain a text feature and a multimodal feature. The student branch is conditioned only on the text feature and samples a few-step trajectory on-policy. The teacher branch is conditioned on the stronger multimodal feature of the text prompt and target image.
+          </p>
+          <p>
+            Teacher and student then predict velocities on the same trajectory states, and training minimizes their difference over the student's own roll-outs. After training, the teacher branch is discarded, and inference uses exactly the same few-step text-to-image pipeline as the original step-distilled model.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section compact-section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-centered image-frame">
+          <img src="static/images/lora_compare_01.jpg" alt="LoRA customization comparison" width="88%">
+          <p class="figure-caption">In small customized LoRA training, D-OPSD learns new concepts from only a few image-text pairs while maintaining few-step generation quality and generalizing to unseen prompts.</p>
+        </div>
+        <div class="content has-text-centered image-frame" style="margin-top: 3rem;">
+          <img src="static/images/full_compare_01.jpg" alt="Full fine-tuning comparison" width="95%">
+          <p class="figure-caption">In full fine-tuning, D-OPSD adapts the model toward the target domain (anime) while retaining original-domain knowledge and few-step inference capability.</p>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Across LoRA customization and full fine-tuning, experiments show that D-OPSD enables the model to learn new concepts, styles, and domain preferences from target image-text pairs without sacrificing its original few-step capacity. Compared with SFT and PSO-style baselines, D-OPSD better balances target distribution adaptation, visual quality, prompt following, and prior knowledge retention.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section compact-section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Future Work</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we introduce on-policy self-distillation to image generation and show that it is a promising paradigm for continuously training step-distilled diffusion models. Building on this framework, several directions merit further study.
+          </p>
+          <ul>
+            <li><b>Richer teacher-side context.</b> An important open question is how to construct stronger conditional signals for the teacher. One possibility is to incorporate guidance from image editing models or video generation models.</li>
+            <li><b>Additional training constraints.</b> How to leverage other training targets in D-OPSD, for example by combining our framework with additional training constraints.</li>
+            <li><b>Multi-expert on-policy distillation.</b> It is worth exploring whether multi-expert OPD can be introduced into the post-training stage of diffusion models based on D-OPSD loss. A possible strategy is to first train domain-specific experts using RL or SFT, and then distill these experts back into a single base model within our framework.</li>
+          </ul>
+          <p>
+            More broadly, we hope our study provides useful insights for future research on post-training and continuous adaptation in diffusion-based generation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@article{jiang2026dopsd,
+      title={D-OPSD: On-Policy Self-Distillation for Continuously Tuning Step-Distilled Diffusion Models},
+      author={Jiang, Dengyang and Jin, Xin and Liu, Dongyang and Wang, Zanyi and Zheng, Mingzhe and Du, Ruoyi and Yang, Xiangpeng and Wu, Qilong and Li, Zhen and Gao, Peng and Yang, Harry and Hoi, Steven},
+      journal={arXiv preprint arXiv:},
+      year={2026}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered"></div>
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p style="text-align:center;font-size:12px;">
+          This website is adapted from <a href="https://vvvvvjdy.github.io/sra/">SRA</a> and <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
