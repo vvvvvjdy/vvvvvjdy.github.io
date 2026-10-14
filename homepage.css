@@ -424,7 +424,7 @@ main {
   color:var(--accent);
   border-radius:4px
 }
-.publication .venue {
+.publication .venue, .project .venue {
   font-size:12px;
   font-weight:700
 }
