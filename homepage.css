@@ -424,6 +424,10 @@ main {
   color:var(--accent);
   border-radius:4px
 }
+.publication .venue {
+  font-size:12px;
+  font-weight:700
+}
 .featured-label {
   font:8px ui-monospace,SFMono-Regular,Consolas,monospace;
   letter-spacing:1.4px;
